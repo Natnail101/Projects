@@ -1,0 +1,144 @@
+body section{
+    border-style: dashed;
+    border-color: orange;
+
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    
+}
+header{
+    grid-column: 1/4;
+}
+.para{
+    grid-column: 2/4;
+}
+.para{
+    grid-row: 1/4;
+  }
+.para2{
+    grid-column: 2/4;
+}
+.para2{
+    margin-top: 20px;
+    grid-row: 2/4;
+}
+
+.reffer{
+    border-style: dashed;
+    border-color: orange;
+    padding: 10px;
+}
+.home{
+    background-color: black;
+    color: aliceblue;
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+.home:hover{
+    background-color: sandybrown;
+    color: black;
+    
+}
+.hbutton{
+    padding:50px;
+    
+}
+
+h1{
+    font-family: 'courier';
+    text-align: center;
+    color: aliceblue;
+}
+.name{
+    font-family: 'Courier New', Courier, monospace; 
+    text-align: center;
+    color: aliceblue;
+
+}
+.para{
+    font-size: 15px;
+    font-family: monospace;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-indent: 30px;
+    color: aliceblue;
+    display: flex;
+    
+}
+.para
+{
+    flex: 1 0 50%
+}
+.para2{
+    font-size: 15px;
+    font-family: monospace;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-indent: 30px;
+    color: aliceblue;
+    
+    display: flex;
+}
+.para2
+{
+    flex: 1 0 50%
+}
+
+.head2{
+    color: aliceblue;
+    font-family: copperplate;
+    font-size: 25px;
+    text-align: center;
+}
+
+body{
+    background-color: steelblue;
+}
+.ref{
+    font-size: 25px;
+    font-family: copperplate;
+    color: aliceblue;
+    text-decoration: underline;
+}
+.reffer{
+    font-family: monospace;
+    font-size: 15px;
+    text-align: center;
+    
+}
+.reffer a:link{
+    color: aliceblue;
+    background-color: transparent;
+    text-decoration: none;
+}
+.reffer a:visited{
+    color: aliceblue;
+}
+.reffer a:hover{
+    color: khaki;
+    text-decoration: underline;
+}
+
+.copy{
+    text-align: center;
+   color: aliceblue; 
+   padding: 10px;
+}
+@media (max-width:500px){
+    section{
+        display: initial;
+        white-space: normal;
+        width: 40px;
+    }
+}
+@media(min-width:700px){
+    section{
+        display: grid;
+       
+    
+    }
+}

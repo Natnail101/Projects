@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Way to Trigger js Events</title>
+</head>
+<body>
+    
+    <h1>Two Way to Trigger js Events</h1>
+    <button onclick="disappearer()">click Moi!</button>
+
+    <button id="hider">click Me!</button>
+
+    <p id="hidee"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit laudantium dicta unde veritatis natus dolor incidunt? 
+        Cumque error aspernatur mollitia doloribus, earum qui repudiandae
+        fugiat animi totam, ab libero praesentium!</p>
+<script>
+    var hiderElement = document.getElementsById("hider");
+    hiderElement.addEventListener("click",function(){
+        disappearer();
+    })
+
+    function disappearer(){
+        var hideeElement = document.getElementsById('hidee');
+        hideeElement.style.display = 'none';
+    };
+</script>    
+</body>
+</html>

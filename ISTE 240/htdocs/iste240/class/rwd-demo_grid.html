@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RWD plain vanilla demo-Grid Demo</title>
+
+  <style>
+  /* 'lorem styles'...*/
+    * { border: 1px solid hotpink; }
+  
+  /* *********************************
+     Code that just makes it look nice
+     ********************************* */
+     /* NOTE: this (below) is way more than usual for a 
+        plain vanilla demo */
+        
+  .container {
+    /* the 'container' trick...*/
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+  }
+
+  /* this...
+    > * 
+    ...is a super power 
+  */
+  .container > * {
+    background: #888888;
+    border-radius: 1.5em;
+    color: #FFFFFF;
+    font-family: Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    /* margin: 20px;*/
+    padding: 20px;
+
+    /* unusual, keeping an element pushed open... */
+    min-height: 200px; /* ...for demo purposes only*/
+
+    /* secret sauce: keeping content centered and middled */
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    /* ...see the CSS Tricks article on "CSS Flex" */
+  }
+  
+  /**********************************
+  Responsive web design code
+  ***********************************/
+  /* NOTE: CSS for RWD typically goes *below* the 'regular' CSS */
+
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+header{grid-column: 1/4;}
+article{grid-row:2 / 4;}
+footer{grid-column:2/4;}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      Content
+    </header>
+
+    <article>
+      Sidebar
+    </article>
+
+    <aside id="more-info">
+      more info
+    </aside>
+
+    <aside id="Sidebar">
+      more info
+    </aside>
+
+    <footer>
+      footer
+    </footer>
+
+  </div><!-- .container -->
+
+</body>
+</html>

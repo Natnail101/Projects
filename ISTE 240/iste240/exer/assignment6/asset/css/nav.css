@@ -1,0 +1,51 @@
+
+.menu ul{
+    margin-top: 20px;
+    display: inline;
+    padding: 10px;
+    display: flex;
+    text-decoration: underline;
+    padding: 20px;
+    list-style: none;
+    justify-content: center;
+   
+    
+}
+.menu a:link{
+    font-family: monospace;
+    font-size: 15px;
+    text-align: center;
+    font-size: 22px;
+    color: aliceblue;
+    
+        
+}
+
+.menu a:visited{
+    color: aliceblue;
+    
+}
+.menu a:hover{
+    
+    text-decoration: underline;
+    background-color: silver;
+    color: maroon
+}
+.menu a.is-current{
+    background-color:maroon;
+    color: white;
+}
+#donation{
+    color: white;
+}
+.para2{
+    font-size: 22px;
+    font-family: monospace;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-indent: 30px;
+    color: aliceblue;
+    display: flex;
+    text-align: center;
+
+}

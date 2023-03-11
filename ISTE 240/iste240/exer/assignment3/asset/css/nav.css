@@ -1,0 +1,47 @@
+
+nav ul li{
+    display: inline;
+    padding: 50px;
+    text-align: center;
+    text-decoration: underline;
+    padding: 20px;
+   
+    
+}
+nav ul li a:link{
+    font-family: monospace;
+    font-size: 15px;
+    text-align: center;
+    font-size: 18px;
+    color: aliceblue;
+    
+}
+
+nav ul li a:visited{
+    color: aliceblue;
+    
+}
+nav ul li a:hover{
+    
+    text-decoration: underline;
+    background-color: silver;
+    color: maroon
+}
+nav .is-current{
+    background-color:maroon;
+    color: white;
+}
+#donation{
+    color: white;
+}
+.para2{
+    font-size: 22px;
+    font-family: monospace;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-indent: 30px;
+    color: aliceblue;
+    display: flex;
+    text-align: center;
+
+}

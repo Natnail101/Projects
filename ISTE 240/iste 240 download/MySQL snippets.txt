@@ -1,0 +1,93 @@
+MySQL snippets.txt
+******************
+From: https://dev.mysql.com/doc/mysql-getting-started/en/
+
+------------------
+Find your MySQL
+------------------
+LOCAL...
+cd C:\MAMP\bin\mysql\bin (Windows ...obviously; MacOS ...?)
+
+SOLACE...
+- get your MySQL password from .my.cnf in your home directory on Solace
+- at CLI...
+ssh rmkics@solace.ist.rit.edu
+Enter password: (your RIT password - does not show chars as you type)
+
+BANJO...
+- Banjo does not host mysql ¯\_(ツ)_/¯
+
+------------------
+Login to MySQL
+------------------
+mysql --version
+
+mysql -u root -p
+
+Enter password: **** (local:root -OR- solace:[from .my.cnf])
+- alternativly (if you have difficulty copying/pasting your password):
+  mysql -u root -pYOURPASSWORD
+  ...enter your password on the same line (note: no space after -p)
+  
+------------------
+COMMANDS TO ENTER at the mysql> prompt
+------------------
+SHOW DATABASES;
+
+CREATE DATABASE pets; # <-- comment this out if using MySQL on Solace
+
+SHOW DATABASES;
+
+USE pets; # <-- change "pets" to your RIT username if using MySQL on Solace
+
+CREATE TABLE cats
+(
+  id              INT unsigned NOT NULL AUTO_INCREMENT, # Unique ID for the record
+  name            VARCHAR(150) NOT NULL,                # Name of the cat
+  owner           VARCHAR(150) NOT NULL,                # Owner of the cat
+  birth           DATE NOT NULL,                        # Birthday of the cat
+  PRIMARY KEY     (id)                                  # Make the id the primary key
+);
+
+SHOW tables;
+
+DESCRIBE cats;
+
+INSERT INTO cats ( name, owner, birth) VALUES
+  ( 'Sandy', 'Lennon', '2015-01-03' ),
+  ( 'Cookie', 'Casey', '2013-11-13' ),
+  ( 'Charlie', 'River', '2016-05-21' );
+
+SELECT * FROM cats;
+
+SELECT name FROM cats WHERE owner = 'Casey';
+
+SELECT * FROM cats;
+
+DELETE FROM cats WHERE name='Cookie';
+
+SELECT * FROM cats;
+
+ALTER TABLE cats ADD gender CHAR(1) AFTER name;
+
+DESCRIBE cats;
+
+SHOW CREATE TABLE cats;
+
+ALTER TABLE cats DROP gender;
+
+DESCRIBE cats;
+
+# check out your handiwork in Adminer or phpMyAdmin
+
+SHOW DATABASES;
+
+# uncomment the following if you're sure...
+# DROP DATABASE pets;
+
+SHOW DATABASES;
+
+# check out your handiwork in Adminer or phpMyAdmin
+
+# to exit MySQL CLI enter...
+# QUIT

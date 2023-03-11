@@ -1,0 +1,43 @@
+<!-- JavaScript built-in function
+	 ********************************************** -->
+<script>
+document.write("Insert this into the webpage")
+</script>
+
+<br><br>
+
+<!-- JavaScript Alert
+	 ********************************************** -->
+<script>
+	alert("Hello World!");
+</script>
+
+<!-- JavaScript Confirm
+	 ********************************************** -->
+<script>
+var again = confirm("Play again?");
+while (again == true) {
+	again = confirm("Okay, play again");
+}
+alert("See you another time");
+</script>
+
+<!-- JavaScript Prompt
+	 ********************************************** -->
+<script>
+var firstName = prompt("Enter your First Name");
+var quantity = prompt("How many things do you want?", "0");
+alert("Hello " + firstName + ".\nYou will get " + quantity + " things.")
+</script>
+
+<!-- FUNCTION example
+	 ********************************************** -->
+<script>
+function getPrice() {
+   var price;
+   price = prompt("Enter the price");
+   price = parseFloat(price);
+   alert("You entered $" + price.toFixed(2) );
+}
+</script>
+<button onclick="getPrice()">Price</button>

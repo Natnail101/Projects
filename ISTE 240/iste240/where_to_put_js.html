@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where to put JS</title>
+
+    <!-- .getElementsByID();
+    .getElementsByTagName();
+    .getElementsByClassNmae(); -->
+
+<script>
+    console.log("Hello Console");
+    console.log("Count(Before): " + document.getElementsByTagName('div').length);
+
+    function init(){
+        console.log("Count(with init): " + document.getElementsByTagName('div').length);
+    }
+</script>
+
+</head>
+
+<body onload = "init()">
+    <h1>Where to put JS</h1>
+
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>6</div>
+
+
+    <script>
+     
+        console.log("Count(After): " + document.getElementsByTagName('div').length);
+    </script>
+    
+</body>
+</html>

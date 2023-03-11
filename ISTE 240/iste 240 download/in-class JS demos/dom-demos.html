@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+
+<body>
+
+	<h1>Hello World!</h1>
+	<div>JavaScript blah blah blah</div>
+
+	<script>
+	document.write("Insert this into the webpage<br><br>");
+	document.write("URL: " + document.URL)
+	</script>
+	<script>
+		var hideeElement = document.getElementById('hidee')
+		var hideeElement = document.getElementById('hider')
+		hideeElement.addEventListener("click", function() {hideeElement.style.display = "none";
+		})
+		
+		var unhiderElement = document.getElementById('unhider')
+		unhiderElement.addEventListener("click",function(){hideeElement.style.display = "block";
+		})   ;
+
+		var toggleElement = document.getElementById('Toggle')
+		toggleElement.addEventListener("click",function()
+		{if (hideeElement.style.display == 'none'){
+			hideeElement.style.display = 'block';
+		} 
+		else {
+			hideeElement.style.display = 'none';
+		}
+		})   ;
+
+</script>
+
+	
+
+</body>
+</html>

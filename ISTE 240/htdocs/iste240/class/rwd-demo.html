@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RWD plain vanilla demo</title>
+
+  <style>
+  /* 'lorem styles'...*/
+    * { border: 1px solid hotpink; }
+  
+  /* *********************************
+     Code that just makes it look nice
+     ********************************* */
+     /* NOTE: this (below) is way more than usual for a 
+        plain vanilla demo */
+        
+  .container {
+    /* the 'container' trick...*/
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+  }
+
+  /* this...
+    > * 
+    ...is a super power 
+  */
+  .container > * {
+    background: #888888;
+    border-radius: 1.5em;
+    color: #FFFFFF;
+    font-family: Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px;
+    padding: 20px;
+
+    /* unusual, keeping an element pushed open... */
+    min-height: 200px; /* ...for demo purposes only*/
+
+    /* secret sauce: keeping content centered and middled */
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    /* ...see the CSS Tricks article on "CSS Flex" */
+  }
+  
+  /**********************************
+  Responsive web design code
+  ***********************************/
+  /* NOTE: CSS for RWD typically goes *below* the 'regular' CSS */
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div id="content">
+      Content
+    </div>
+
+    <div id="sidebar">
+      Sidebar
+    </div>
+
+  </div><!-- .container -->
+
+</body>
+</html>
